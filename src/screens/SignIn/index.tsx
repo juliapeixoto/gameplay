@@ -1,18 +1,28 @@
-import React, { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import React from "react";
+import { View, Text, Image } from "react-native";
 
+import IllustrationImg from "../../assets/illustration.png";
+import { ButtonIcon } from "../../components/ButtonIcon";
 import { styles } from "./styles";
 
 export function SignIn() {
-  const [text, setText] = useState("");
-
   return (
     <View style={styles.container}>
-      <Text>GamePlay</Text>
+      <Image
+        source={IllustrationImg}
+        style={styles.image}
+        resizeMode="stretch"
+      />
 
-      <TextInput style={styles.input} onChangeText={setText} />
+      <View style={styles.content}>
+        <Text style={styles.title}>Conecte-se e organize suas jogatinas</Text>
 
-      <Text>Você digitou: {text}</Text>
+        <Text style={styles.subtitle}>
+          Crie grupos para jogar seus games favoritos com seus amigos
+        </Text>
+
+        <ButtonIcon title="Entrar com Discord" />
+      </View>
     </View>
   );
 }

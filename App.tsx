@@ -8,7 +8,6 @@ import {
 import { StatusBar } from "react-native";
 import AppLoading from "expo-app-loading";
 
-// import { Background } from "./src/components/Background";
 import { Routes } from "./src/routes";
 
 export default function App() {

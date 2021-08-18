@@ -31,11 +31,7 @@ export function SignIn() {
             Crie grupos para jogar seus games favoritos com seus amigos
           </Text>
 
-          <ButtonIcon
-            title="Entrar com Discord"
-            activeOpacity={0.7}
-            onPress={handleSignIn}
-          />
+          <ButtonIcon title="Entrar com Discord" onPress={handleSignIn} />
         </View>
       </View>
     </Background>

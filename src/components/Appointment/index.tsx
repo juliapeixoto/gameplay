@@ -10,7 +10,10 @@ import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
 export type GuildProps = {
-  owner: true;
+  id: string;
+  name: string;
+  icon: null;
+  owner: boolean;
 };
 
 export type AppointmentProps = {

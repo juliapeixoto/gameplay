@@ -49,7 +49,7 @@ export function Appointment({ data, ...rest }: Props) {
             <View style={styles.dateInfo}>
               <CalendarSvg />
 
-              <Text style={styles.date}> {data.date} </Text>
+              <Text style={styles.date}>{data.date}</Text>
             </View>
 
             <View style={styles.playersInfo}>

@@ -1,5 +1,10 @@
 import React from "react";
-import { TouchableOpacity, TouchableOpacityProps, View } from "react-native";
+import {
+  TouchableOpacity,
+  TouchableOpacityProps,
+  View,
+  Text,
+} from "react-native";
 import { Background } from "../../components/Background";
 import { GuildIcon } from "../GuildIcon";
 import { Feather } from "@expo/vector-icons";

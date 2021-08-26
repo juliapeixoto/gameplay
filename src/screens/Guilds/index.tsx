@@ -1,33 +1,43 @@
 import React from "react";
 import { FlatList, Text, View } from "react-native";
-import { Background } from "../../components/Background";
+import { GuildProps } from "../../components/Guild";
 import { Guild } from "../../components/Guild";
 import { ListDivider } from "../../components/ListDivider";
 
 import { styles } from "./styles";
 
-export function Guilds() {
+type Props = {
+  handleGuildSelect: (guild: GuildProps) => void;
+};
+
+export function Guilds({ handleGuildSelect }: Props) {
   const guilds = [
     {
       id: "1",
       name: "Lendários",
-      icon: null,
+      icon: "image.png",
       owner: true,
+    },
+    {
+      id: "2",
+      name: "Abacates",
+      icon: "image.png",
+      owner: false,
     },
   ];
 
   return (
-    <Background>
-      <View style={styles.container}>
-        <FlatList
-          data={guilds}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <Guild data={item} />}
-          showsVerticalScrollIndicator={false}
-          ItemSeparatorComponent={() => <ListDivider />}
-          style={styles.guilds}
-        />
-      </View>
-    </Background>
+    <View style={styles.container}>
+      <FlatList
+        data={guilds}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <Guild data={item} onPress={() => handleGuildSelect(item)} />
+        )}
+        showsVerticalScrollIndicator={false}
+        ItemSeparatorComponent={() => <ListDivider />}
+        style={styles.guilds}
+      />
+    </View>
   );
 }
